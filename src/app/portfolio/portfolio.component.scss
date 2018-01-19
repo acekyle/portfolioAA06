@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.portTitle{
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  background-color: #C2C6CB;
+  padding-top: .5em;
+  padding-left: 1em;
+}
+
+.portfoliowrapper {
+  width: 100%;
+  height: inherit;
+  display: grid;
+  padding: 3.1em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-gap: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  background-color: #C2C6CB;
+}
+
+.portfolio-item {
+  background-color: #25333e;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: center;
+  color: #36D7B7;
+  transition: all ease-in-out 700ms;
+}
+
+.portfolio-item:hover {
+  background-blend-mode: initial;
+  background-size: 100%;
+  font-size: 0;
+}
+
+.portfolio-item.venuelyst:hover {
+  background-blend-mode: initial;
+  background-size: 70%;
+}
+
+.portfolio-item.pvrty:hover {
+  background-size: 35%;
+}
+
+.portfolio-item.postablur:hover {
+  background-position: center;
+  background-size: 115%;
+}
+
+.portfolio-item.croozen:hover {
+  background-position: top left;
+  background-size: 115%;
+}
+
+.portfolio-item.bubble:hover {
+  background-position: center;
+  background-size: 115%;
+}
+
+.portfolio-item.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.portfolio-item.medium {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.portfolio-item.large {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.portfolio-item.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.portfolio-item.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.venuelyst {
+  background-image: url("/assets/portfolio-pics/venuelyst.png");
+  grid-area: venuelyst;
+}
+
+.pvrty {
+  background-image: url("/assets/portfolio-pics/pvrty.png");
+  background-color: #25333e;
+  grid-area: pvrty;
+}
+
+.croozen {
+  background-image: url("/assets/portfolio-pics/croozen.png");
+  grid-area: croozen;
+}
+
+.postablur {
+  background-image: url("/assets/portfolio-pics/postablur.png");
+  grid-area: postablur;
+}
+
+.bubble {
+  background-image: url("/assets/portfolio-pics/bubblebazooka.png");
+  background-position: top;
+  background-size: 200%;
+  grid-area: bubble;
+}
+
+.IAT {
+  background-image: url("/assets/portfolio-pics/interactivetel.png");
+  grid-area: interactivetel;
+}
+
+.footer {
+  grid-column: span 12;
+  background-color: #6C7A89;
+}
+
+
+.modal {
+  width: 50% !important;
+  height: 50% !important;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  transform: translateX(50%) scaleY(1) !important;
+}
+
+.modal-content {
+  width: 100%;
+  // margin: 25px, 0, 0, 10px;
+
+  h4 {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .picture {
+    grid-area: picture;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    background-size: 100%;
+    padding: 1.5px;
+    height: 175px;
+  }
+
+  p {
+    grid-area: description;
+    transform: translateY(25%) scaleX(1) !important;
+    margin-bottom: 2%;
+  }
+
+  a {
+    grid-area: link;
+    color: #36D7B7;
+    text-decoration: none;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "title title"
+  "picture picture"
+  "description description"
+  "link link"
+  ;
+}
+
+#portven {
+  .picture {
+    background-image: url("/assets/portfolio-pics/venuelyst.png");
+  }
+}
+#portpar {
+  .picture {
+    background-image: url("/assets/portfolio-pics/pvrty.png");
+    background-size: 25%;
+  }
+}
+#portcoz {
+  .picture {
+    background-image: url("/assets/portfolio-pics/croozen.png");
+  }
+}
+#portpos {
+  .picture {
+    background-image: url("/assets/portfolio-pics/postablur.png");
+  }
+}
+#portbub {
+  .picture {
+    background-image: url("/assets/portfolio-pics/bubblebazooka.png");
+  }
+}
+#portiat {
+  .picture {
+    background-image: url("/assets/portfolio-pics/interactivetel.png");
+  }
+}
+
+
+.btn-flat {
+  padding-right: 25px;
+}
+
+
+@media only screen and (max-width : 650px) {
+  .portfoliowrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 600px;
+  }
+
+  .portfolio-item {
+    flex-grow: 1;
+    margin: 1px;
+  }
+
+  .modal {
+    width: 93% !important;
+    height: 50% !important;
+    margin-left: 1em;
+    transform: translateY(20%) scaleX(1) !important;
+  }
+
+  .modal-content {
+    width: 100%;
+    margin: 10px, 0, 0, 10px;
+
+    h4 {
+      grid-area: title;
+      margin-bottom: .5em;
+    }
+
+    p {
+      grid-area: description;
+      transform: translateY(25%) scaleX(1) !important;
+
+    }
+
+    a {
+      grid-area: link;
+      text-align: center;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% auto auto .2fr;
+    grid-template-areas:
+    "title title"
+    "picture description"
+    "picture description"
+    "link ."
+    ;
+  }
+
+  #portpar {
+    .picture {
+      background-size: 50%;
+    }
+  }
+
+}

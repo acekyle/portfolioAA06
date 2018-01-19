@@ -1,0 +1,95 @@
+
+.sitewrapper {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+  font-family: 'Raleway', sans-serif;
+  background-color: #C2C6CB;
+}
+
+.header {
+  grid-column: span 12;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+#profileImage {
+  max-width: 175px;
+  max-height: 175px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  border-radius: 50%;
+  border: solid #000;
+  border-width: 5px;
+  border-color: #FFF;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profileName {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.profileTitle {
+  text-align: center;
+}
+
+.middle {
+  grid-column: 2 / 12;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10%;
+  grid-auto-rows: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF;
+  p {
+    padding: 1em 2em 0 2em;
+  }
+}
+
+.bodyTitle{
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyDescription{
+  text-align: center;
+  flex-grow: 6;
+  line-height: 30px;
+  .pLink {
+    color: #36D7B7;
+  }
+}
+
+.footer {
+  grid-column: span 12;
+  background-color: #6C7A89;
+}
+
+
+@media only screen and (max-width : 500px) {
+  .footer {
+    grid-column: span 12;
+    background-color: #6C7A89;
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+}

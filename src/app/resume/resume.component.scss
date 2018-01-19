@@ -1,0 +1,56 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer {
+  grid-column: span 12;
+  background-color: #6C7A89;
+}
+
+.resumewrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #C2C6CB ;
+}
+
+.card {
+  width: 400px;
+  margin: 1.2em;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-header-image {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Symbol_from_Marvel%27s_The_Avengers_logo.svg/2000px-Symbol_from_Marvel%27s_The_Avengers_logo.svg.png');
+  background-size: cover;
+}
+
+mat-card-title {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+.resumeLink {
+  text-decoration: none;
+  outline-style: none;
+  margin: 0 0 10px 10px;
+  &:hover {
+    color: #6C7A89;
+  }
+}
+
+.resumewrapper button {
+  outline-style: none;
+}
+
+.resumewrapper button:hover{
+  color: #36D7B7;
+}
+
+.resumewrapper img {
+  object-fit: cover;
+  max-height: 250px;
+}

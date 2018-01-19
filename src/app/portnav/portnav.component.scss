@@ -1,0 +1,28 @@
+.nav-wrapper {
+  background-color: #6C7A89;
+  font-family: "Raleway", sans-serif;
+  
+  a {
+    text-decoration: none;
+    color: #FFF;
+
+    &:hover {
+      color: #36D7B7;
+      background-color: inherit;
+    }
+  }
+
+  .active {
+    color: #36D7B7;
+  }
+}
+
+.side-nav {
+  background-color: #6C7A89;
+  margin-top: .5em;
+  text-align: center;
+}
+
+.top-link {
+  margin-top: 15em;
+}
